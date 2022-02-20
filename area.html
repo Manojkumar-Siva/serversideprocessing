@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Area Of Rectangle</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        body{
+            text-align: center;
+            background-color:thistle;
+            color: #081c15;
+        }
+        .container{
+            display: block;
+            background-color:aquamarine;
+            text-align: center;
+            border-radius: 20px;
+            width: 500px;
+            height: 200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        form{
+            padding-top: 25px;
+        }
+        input{
+            text-align: center;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 1.5px 7px #234356;
+            background-color:whitesmoke;
+        }
+    </style>
+</head>
+<body>
+    <h1>-Area of Rectangle-</h1>
+    <div class="container">
+        <form method="POST">
+             {% csrf_token %}
+            Length = <input type="text" name="length" value="{{l}}"><b>Meters</b> <br/>
+            <br/>
+            Width = <input type="text" name="width" value="{{w}}"><b>Meters</b><br/>
+            <br/>
+            <input type="submit" value="Calculate"><br/>
+            <br/>
+            Area = <input type="text" name="area" value="{{area}}"> <b>Meter</b><sup><b>2</b> </sup><br/>
+        </form>
+    </div>
+</body>
+</html>
